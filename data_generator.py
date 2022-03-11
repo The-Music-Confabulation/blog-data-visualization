@@ -19,28 +19,73 @@ from selenium.common.exceptions import TimeoutException
 import os
 from dotenv import load_dotenv
 from bson.json_util import dumps
+import time
+
 load_dotenv()
 import certifi
 import json
-ca = certifi.where()
 
-config = dotenv_values(".env")
-
-client = pymongo.MongoClient(f"mongodb+srv://" + config['SERVER_USR'] + ":" + config['SERVER_PWD'] +
-                             "@cluster0.1wmqh.mongodb.net/blog_content"
-                             "?retryWrites=true&w=majority", tlsCAFile=ca)
-
-db = client.blog_content
-collection = db['posts']
-
-cursor = collection.find({})
-with open('collection.json', 'w') as file:
-    file.write(dumps(cursor))
+url_list = []
 
 
-with open('collection.json', 'r') as myfile:
-    data=myfile.read()
+def getURL():
+    ca = certifi.where()
 
-obj = json.loads(data)
+    config = dotenv_values(".env")
+
+    client = pymongo.MongoClient(f"mongodb+srv://" + config['SERVER_USR'] + ":" + config['SERVER_PWD'] +
+                                 "@cluster0.1wmqh.mongodb.net/blog_content"
+                                 "?retryWrites=true&w=majority", tlsCAFile=ca)
+
+    db = client.blog_content
+    collection = db['posts']
+
+    cursor = collection.find({})
+
+    if os.path.exists("collection.json"):
+
+        # if file exists, read and extract length
+        with open('collection.json', 'r') as myfile:
+            data = myfile.read()
+        obj = json.loads(data)
+
+        old_num = len(obj)
+        print(obj)
+        # Delete old json
+        print("Delete and create new json")
+        os.remove("collection.json")
+
+        # Export new Json,
+        with open('collection.json', 'w') as file:
+            file.write(dumps(cursor))
+
+        time.sleep(5)
+
+        # Read new Json data,
+        with open('collection.json', 'r') as myfile:
+            data = myfile.read()
+        obj = json.loads(data)
+        print(obj)
+        # This is the current number of posts
+        new_num = len(obj)
+
+        # 0 1
+        # 0 1 2 3
+        # get element at 2 3
+        print("Getting the url \n")
+        for i in range(old_num, new_num):
+            url_list.append(str(obj[i]['url']))  # this is the url
+
+        print(url_list)
+        print("Done \n")
+        return url_list
+    # else:
+    #     # create new data.json file
+    #     print("Data does not exist")
+    #     with open('collection.json', 'w') as file:
+    #         file.write(dumps(cursor))
+    # return url_list
 
 
+urls = getURL()
+print(urls)
