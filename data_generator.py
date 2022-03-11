@@ -20,10 +20,10 @@ import os
 from dotenv import load_dotenv
 from bson.json_util import dumps
 import time
-
-load_dotenv()
 import certifi
 import json
+load_dotenv()
+
 
 url_list = []
 
@@ -69,23 +69,33 @@ def getURL():
         # This is the current number of posts
         new_num = len(obj)
 
-        # 0 1
-        # 0 1 2 3
-        # get element at 2 3
-        print("Getting the url \n")
-        for i in range(old_num, new_num):
-            url_list.append(str(obj[i]['url']))  # this is the url
+        if old_num == new_num:
+            return None
+        else:
+            # 0 1
+            # 0 1 2 3
+            # get element at 2 3
+            print("Getting the url \n")
+            for i in range(old_num, new_num):
+                url_list.append(str(obj[i]['url']))  # this is the url
 
-        print(url_list)
-        print("Done \n")
+            print(url_list)
+            print("Done \n")
+            return url_list
+    else:
+        # create new data.json file
+        print("Data does not exist. Create new Json file")
+        with open('collection.json', 'w') as file:
+            file.write(dumps(cursor))
+
+        time.sleep(5)
+
+        # Read new Json data,
+        with open('collection.json', 'r') as myfile:
+            data = myfile.read()
+        obj = json.loads(data)
+
+        for i in range(len(obj)):
+            url_list.append(str(obj[i]['url']))
         return url_list
-    # else:
-    #     # create new data.json file
-    #     print("Data does not exist")
-    #     with open('collection.json', 'w') as file:
-    #         file.write(dumps(cursor))
-    # return url_list
 
-
-urls = getURL()
-print(urls)
