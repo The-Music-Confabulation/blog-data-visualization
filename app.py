@@ -8,16 +8,6 @@ import pandas as pd
 # print(getData())
 
 
-# with open('collection.json', encoding='utf-8') as inputfile:
-#     df = pd.read_json(inputfile)
-#
-# # df.to_csv('csvfile.csv', encoding='utf-8', index=False)
-#
-# print(df.to_string())
-# df = px.data.gapminder().query()
-# fig = px.line(df, x="year", y="lifeExp", title='Life expectancy in Canada')
-# fig.show()
-
 # assume you have a "long-form" data frame
 # see https://plotly.com/python/px-arguments/ for more options
 # Run this app with `python app.py` and
@@ -30,26 +20,48 @@ import pandas as pd
 from dash import Dash, dcc, html, Input, Output
 import os
 
-
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = Dash(__name__, external_stylesheets=external_stylesheets)
 
 server = app.server
 
-app.layout = html.Div([
-    html.H2('Hello World'),
-    dcc.Dropdown(['LA', 'NYC', 'MTL'],
-        'LA',
-        id='dropdown'
+
+with open('collection.json', encoding='utf-8') as inputfile:
+    df = pd.read_json(inputfile)
+
+
+df['like']=df['like'].cumsum()
+
+
+fig = px.line(df, x="date", y="like", title='Number of likes over time')
+
+fig.update_layout(
+    autosize=False,
+    width=500,
+    height=500,
+    margin=dict(
+        l=50,
+        r=50,
+        b=100,
+        t=100,
+        pad=4
     ),
-    html.Div(id='display-value')
+    paper_bgcolor="LightSteelBlue",
+)
+app.layout = html.Div(children=[
+    html.H1(children='Hello Dash'),
+
+    html.Div(children='''
+        Dash: A web application framework for your data.
+    '''),
+
+    dcc.Graph(
+        id='example-graph',
+        figure=fig
+    )
 ])
 
-@app.callback(Output('display-value', 'children'),
-                [Input('dropdown', 'value')])
-def display_value(value):
-    return f'You have selected {value}'
 
 if __name__ == '__main__':
     app.run_server(debug=True)
