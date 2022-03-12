@@ -31,12 +31,30 @@ with open('collection.json', encoding='utf-8') as inputfile:
     df = pd.read_json(inputfile)
 
 
-df['like']=df['like'].cumsum()
+df['total_like'] = df['like'].cumsum()
+
+# df['test'] =
 
 
 fig = px.line(df, x="date", y="like", title='Number of likes over time')
 
 fig.update_layout(
+    autosize=False,
+    width=500,
+    height=500,
+    margin=dict(
+        l=50,
+        r=50,
+        b=100,
+        t=100,
+        pad=4
+    ),
+    paper_bgcolor="LightSteelBlue",
+)
+df2 = df.groupby('date', as_index=False)['_id'].count()
+
+fig_2 = px.line(df2, x="date", y="_id", title='Number of posts over time')
+fig_2.update_layout(
     autosize=False,
     width=500,
     height=500,
@@ -59,6 +77,10 @@ app.layout = html.Div(children=[
     dcc.Graph(
         id='example-graph',
         figure=fig
+    ),
+    dcc.Graph(
+        id='example-graph-2',
+        figure=fig_2
     )
 ])
 
