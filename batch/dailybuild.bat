@@ -7,5 +7,3 @@ git add *
 git commit -m "daily build"
 
 git push origin main
-
-git push heroku main
