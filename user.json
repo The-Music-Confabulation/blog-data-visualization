@@ -1,0 +1,221 @@
+[
+    {
+        "username": "MangoSago",
+        "animal": "undecided",
+        "followers": [
+            {
+                "$oid": "6234b11750a5210f50c1da95"
+            },
+            {
+                "$oid": "62360be6c922c2db81d36bdf"
+            },
+            {
+                "$oid": "623612c92e53d8080c842575"
+            }
+        ],
+        "numberOfPosts": [
+            {
+                "$oid": "62330447ea0ba6bd2dd99f39"
+            },
+            {
+                "$oid": "6235d9996b0cb72f15713eeb"
+            }
+        ],
+        "followings": [],
+        "dateJoin": "Thursday, March 17 2022",
+        "like": [
+            {
+                "$oid": "62335b8d9ab841b287362b06"
+            },
+            {
+                "$oid": "62339b1a653382f3f7cd2253"
+            },
+            {
+                "$oid": "62339fc9adfc17db6d13a1a4"
+            },
+            {
+                "$oid": "6235d9ce6b0cb72f15713ef8"
+            },
+            {
+                "$oid": "623612d0bc8c32a38aed9982"
+            },
+            {
+                "$oid": "6236184c2389e18f92c7b693"
+            }
+        ],
+        "comment": [
+            {
+                "$oid": "6236185b2389e18f92c7b6a2"
+            },
+            {
+                "$oid": "62362a7d29af50822b411b31"
+            }
+        ]
+    },
+    {
+        "username": "BigMac",
+        "animal": "undecided",
+        "followers": [
+            {
+                "$oid": "62360eccc922c2db81d36c96"
+            }
+        ],
+        "numberOfPosts": [
+            {
+                "$oid": "62339879a990c326bfee1eae"
+            }
+        ],
+        "followings": [
+            {
+                "$oid": "62361357bc8c32a38aed99b6"
+            }
+        ],
+        "dateJoin": "Thursday, March 17 2022",
+        "like": [
+            {
+                "$oid": "623398b7a990c326bfee1ebc"
+            },
+            {
+                "$oid": "62339ca20e1bdcd70ace5536"
+            },
+            {
+                "$oid": "62339d7b147133d4efd8901c"
+            },
+            {
+                "$oid": "62360236c922c2db81d36af4"
+            },
+            {
+                "$oid": "62361318bc8c32a38aed999e"
+            },
+            {
+                "$oid": "6236f9efef3542e73977d7fc"
+            }
+        ],
+        "comment": []
+    },
+    {
+        "username": "lo5guy",
+        "animal": "undecided",
+        "followers": [],
+        "numberOfPosts": [
+            {
+                "$oid": "6233997da990c326bfee1f21"
+            }
+        ],
+        "followings": [],
+        "dateJoin": "Thursday, March 17 2022",
+        "like": [
+            {
+                "$oid": "6233998fa990c326bfee1f2f"
+            },
+            {
+                "$oid": "62339992a990c326bfee1f3c"
+            }
+        ],
+        "comment": []
+    },
+    {
+        "username": "Heolly",
+        "animal": "undecided",
+        "followers": [
+            {
+                "$oid": "62360d00c922c2db81d36bff"
+            }
+        ],
+        "numberOfPosts": [],
+        "followings": [
+            {
+                "$oid": "6234b11750a5210f50c1da94"
+            }
+        ],
+        "dateJoin": "Friday, March 18 2022",
+        "like": [
+            {
+                "$oid": "6234b0e250a5210f50c1da33"
+            },
+            {
+                "$oid": "6234b0f350a5210f50c1da5d"
+            },
+            {
+                "$oid": "6234b0fc50a5210f50c1da6d"
+            },
+            {
+                "$oid": "62365134731eb19b043d47f2"
+            },
+            {
+                "$oid": "6236513c731eb19b043d4836"
+            },
+            {
+                "$oid": "62365140731eb19b043d486c"
+            }
+        ],
+        "comment": []
+    },
+    {
+        "username": "nawtgood",
+        "animal": "undecided",
+        "followers": [],
+        "numberOfPosts": [],
+        "followings": [
+            {
+                "$oid": "62360be6c922c2db81d36bde"
+            },
+            {
+                "$oid": "62360d00c922c2db81d36bfe"
+            },
+            {
+                "$oid": "62360eccc922c2db81d36c95"
+            }
+        ],
+        "dateJoin": "Saturday, March 19 2022",
+        "like": [
+            {
+                "$oid": "62360273c922c2db81d36b0f"
+            },
+            {
+                "$oid": "62360276c922c2db81d36b1c"
+            },
+            {
+                "$oid": "62360283c922c2db81d36b2c"
+            },
+            {
+                "$oid": "62362c8129af50822b411b58"
+            },
+            {
+                "$oid": "62362c8a29af50822b411b64"
+            },
+            {
+                "$oid": "62362c8e29af50822b411b70"
+            }
+        ],
+        "comment": []
+    },
+    {
+        "username": "skies",
+        "animal": "undecided",
+        "followers": [
+            {
+                "$oid": "62361357bc8c32a38aed99b7"
+            }
+        ],
+        "numberOfPosts": [
+            {
+                "$oid": "6236128f2e53d8080c842556"
+            },
+            {
+                "$oid": "623614472e53d8080c84259f"
+            },
+            {
+                "$oid": "62361faafb56c666fc174f89"
+            }
+        ],
+        "followings": [
+            {
+                "$oid": "623612c92e53d8080c842574"
+            }
+        ],
+        "dateJoin": "Saturday, March 19 2022",
+        "like": [],
+        "comment": []
+    }
+]

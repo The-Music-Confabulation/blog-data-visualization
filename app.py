@@ -15,9 +15,6 @@ with open('collection.json', encoding='utf-8') as inputfile:
 
 df['total_like'] = df['like'].cumsum()
 
-# df['test'] =
-
-
 fig = px.line(df, x="date", y="like", title='Number of likes over time')
 
 fig.update_layout(
