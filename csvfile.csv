@@ -1,4 +1,0 @@
-_id,title,content,author,url,date,like,tag,approved,comments,__v
-{'$oid': '62271d894b834bb1b22232d6'},how are you doing?,just wanna ask how are you guys doing?,Mango Sago,pbNs7tAUFkk,2022-03-08,3,keshi,True,[{'$oid': '622720464b834bb1b222330d'}],1
-{'$oid': '6227217b4ffedc893ec1d265'},"remember to say ""i love you"" to your pets",,Mango Sago,WybG8FesMc8,2022-03-08,9,colde,True,"[{'$oid': '62293510898088d9276b0d80'}, {'$oid': '6229353e0465952d8b27492c'}]",2
-{'$oid': '622b00cf9cbb17f71ddada7e'},late night vibe,,Mango Sago,DsgaUT-gXpQ,2022-03-11,2,Ren Downfelt,True,[],0

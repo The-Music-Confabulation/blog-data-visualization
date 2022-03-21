@@ -167,7 +167,11 @@
         "author": "MangoSago",
         "url": "WybG8FesMc8",
         "date": "Sunday, March 20 2022",
-        "like": [],
+        "like": [
+            {
+                "$oid": "6237c7e74c2af373b2ee6cb3"
+            }
+        ],
         "tag": "colde",
         "comments": []
     }

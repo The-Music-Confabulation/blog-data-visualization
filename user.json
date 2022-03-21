@@ -218,7 +218,11 @@
             }
         ],
         "dateJoin": "Saturday, March 19 2022",
-        "like": [],
+        "like": [
+            {
+                "$oid": "6237c7e74c2af373b2ee6cb3"
+            }
+        ],
         "comment": []
     }
 ]
