@@ -44,6 +44,9 @@
             },
             {
                 "$oid": "6236184c2389e18f92c7b693"
+            },
+            {
+                "$oid": "6238f9c5f976e5cb03d288d6"
             }
         ],
         "comment": [
@@ -52,6 +55,9 @@
             },
             {
                 "$oid": "62362a7d29af50822b411b31"
+            },
+            {
+                "$oid": "6238f5f3f53fcfbbee00db0b"
             }
         ]
     },
@@ -66,6 +72,9 @@
         "numberOfPosts": [
             {
                 "$oid": "62339879a990c326bfee1eae"
+            },
+            {
+                "$oid": "62390a4cff9cbf7fb730d86f"
             }
         ],
         "followings": [
@@ -223,6 +232,16 @@
                 "$oid": "6237c7e74c2af373b2ee6cb3"
             }
         ],
+        "comment": []
+    },
+    {
+        "username": "admin",
+        "animal": "undecided",
+        "followers": [],
+        "numberOfPosts": [],
+        "followings": [],
+        "dateJoin": "Monday, March 21 2022",
+        "like": [],
         "comment": []
     }
 ]
