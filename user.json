@@ -101,9 +101,19 @@
             },
             {
                 "$oid": "6236f9efef3542e73977d7fc"
+            },
+            {
+                "$oid": "623a4111008dc510cd514b12"
+            },
+            {
+                "$oid": "623a4b893d7b42c23d1ffe39"
             }
         ],
-        "comment": []
+        "comment": [
+            {
+                "$oid": "623a4c1f3d7b42c23d1ffe54"
+            }
+        ]
     },
     {
         "username": "lo5guy",
@@ -124,7 +134,11 @@
                 "$oid": "62339992a990c326bfee1f3c"
             }
         ],
-        "comment": []
+        "comment": [
+            {
+                "$oid": "623a4ce7ad92f90f37dd287c"
+            }
+        ]
     },
     {
         "username": "Heolly",
@@ -166,7 +180,11 @@
     {
         "username": "nawtgood",
         "animal": "undecided",
-        "followers": [],
+        "followers": [
+            {
+                "$oid": "623a4ea5b23c070460412530"
+            }
+        ],
         "numberOfPosts": [],
         "followings": [
             {
@@ -198,9 +216,19 @@
             },
             {
                 "$oid": "62362c8e29af50822b411b70"
+            },
+            {
+                "$oid": "623a4cc1ad92f90f37dd2844"
+            },
+            {
+                "$oid": "623a4cc3ad92f90f37dd2851"
             }
         ],
-        "comment": []
+        "comment": [
+            {
+                "$oid": "623a4cd1ad92f90f37dd2861"
+            }
+        ]
     },
     {
         "username": "skies",
@@ -224,6 +252,9 @@
         "followings": [
             {
                 "$oid": "623612c92e53d8080c842574"
+            },
+            {
+                "$oid": "623a4ea5b23c07046041252f"
             }
         ],
         "dateJoin": "Saturday, March 19 2022",
