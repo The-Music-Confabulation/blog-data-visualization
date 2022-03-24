@@ -92,15 +92,15 @@ app.layout = html.Div(
             figure=fig_1
         ), style={'margin': '20px', 'border': '2px solid black'}),
 
-        html.Div(children=dcc.Graph(
-            id='fg_2',
-            figure=fig_2
-        ), style={'margin': '20px', 'border': '2px solid black'}),
-
-        html.Div(children=dcc.Graph(
-            id='fg_3',
-            figure=fig_3
-        ), style={'margin': '20px', 'border': '2px solid black'}),
+        # html.Div(children=dcc.Graph(
+        #     id='fg_2',
+        #     figure=fig_2
+        # ), style={'margin': '20px', 'border': '2px solid black'}),
+        #
+        # html.Div(children=dcc.Graph(
+        #     id='fg_3',
+        #     figure=fig_3
+        # ), style={'margin': '20px', 'border': '2px solid black'}),
 
         html.Div(children=dcc.Graph(
             id='fg_4',
